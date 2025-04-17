@@ -60,9 +60,6 @@ matplotlib
 ![image alt](https://github.com/Saktalmale16/TASK-7-Get-Basic-Sales-Summary-from-a-Tiny-SQLite-Database-using-Python./blob/main/image%202.PNG)
 
 ---
-![image alt](https://github.com/Saktalmale16/TASK-7-Get-Basic-Sales-Summary-from-a-Tiny-SQLite-Database-using-Python./blob/main/image%203.PNG)
-
----
 
 # 🚀 Running the Script
 You can run the script either in:
