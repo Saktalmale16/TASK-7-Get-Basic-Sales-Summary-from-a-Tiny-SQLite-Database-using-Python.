@@ -30,74 +30,21 @@ quantity: Number of items sold
 
 price: Price per item
 
-# Task Breakdown
-
-1 . Create SQLite Database & Sales Table: I created an SQLite database called sales_data.db and inserted sample data into the sales table. This table contains products, their sold quantities, and their respective prices.
-
-python
-
-Copy
-
-Edit
-
-import sqlite3
-
-# Connect to SQLite database (this creates the database if it doesn't exist)
-conn = sqlite3.connect("sales_data.db")
-
-# Create a cursor object to execute SQL commands
-cursor = conn.cursor()
-
-# Create the 'sales' table with sample columns
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS sales (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    product TEXT,
-    quantity INTEGER,
-    price REAL
-)
-''')
-
-# Insert some sample data into the sales table
-
-cursor.executemany('''
-INSERT INTO sales (product, quantity, price)
-VALUES (?, ?, ?)
-''', [
-    ('Product A', 10, 20.0),
-    ('Product B', 5, 40.0),
-    ('Product C', 8, 15.0),
-    ('Product D', 12, 25.0)
-])
-
-# Commit changes and close the connection
-
-conn.commit()
-conn.close()
-
 ---
-import sqlite3
-import pandas as pd
 
-# Connect to SQLite database
-conn = sqlite3.connect("sales_data.db")
+# Final Deliverables:
 
-# SQL query to get the sales summary
-query = """
-SELECT product, 
-       SUM(quantity) AS total_qty, 
-       SUM(quantity * price) AS revenue 
-FROM sales 
-GROUP BY product
-"""
+Sales Summary: A printed table showing total quantity and revenue for each product.
 
-# Load results into pandas DataFrame
-df = pd.read_sql_query(query, conn)
+Bar Chart: A visualization of total revenue per product.
 
-# Close the connection
-conn.close()
+Chart Output: The chart can also be saved as a PNG file (sales_chart.png).
 
-# Print the results
-print(df)
+Requirements
+To run this project, make sure you have the following Python libraries installed:
 
+sqlite3 (built-in with Python)
 
+pandas
+
+matplotlib
