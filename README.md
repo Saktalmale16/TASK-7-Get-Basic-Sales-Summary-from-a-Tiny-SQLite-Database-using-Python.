@@ -1,7 +1,7 @@
 # TASK-7-Get-Basic-Sales-Summary-from-a-Tiny-SQLite-Database-using-Python. 
----
+
 # Sales Data Analysis with SQLite and Python
----
+
 # Objective
 
 In this project, I used Python along with SQLite, pandas, and matplotlib to perform basic sales analysis. The goal was to connect to an SQLite database, run SQL queries to get sales data (total quantity sold and revenue per product), and
