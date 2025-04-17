@@ -62,7 +62,9 @@ Python (.py file): Save the script as a .py file and run it directly from the te
 Printed sales summary: Shows the total quantity and revenue per product.
 
 Bar Chart: A simple bar chart displaying total revenue per product.
+
 ---
 # Conclusion
-This project demonstrates how to use SQLite for basic sales data analysis, with
+This project demonstrates how to use SQLite for basic sales data analysis, with Python handling database queries and generating insights through data visualization.
+
 ---
