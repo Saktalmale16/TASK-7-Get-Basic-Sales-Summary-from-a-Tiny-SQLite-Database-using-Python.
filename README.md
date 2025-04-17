@@ -52,6 +52,13 @@ pandas
 matplotlib
 
 ---
+# Output Of the Query
+
+![image alt](https://github.com/Saktalmale16/TASK-7-Get-Basic-Sales-Summary-from-a-Tiny-SQLite-Database-using-Python./blob/main/image%201.PNG)
+
+
+
+
 
 # 🚀 Running the Script
 You can run the script either in:
