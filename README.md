@@ -79,3 +79,9 @@ Bar Chart: A simple bar chart displaying total revenue per product.
 This project demonstrates how to use SQLite for basic sales data analysis, with Python handling database queries and generating insights through data visualization.
 
 ---
+
+📎 Google Clobs Link
+
+(https://colab.research.google.com/#scrollTo=EiAHMAIe8hDT)
+
+---
