@@ -39,3 +39,38 @@ python
 Copy
 
 Edit
+
+import sqlite3
+
+# Connect to SQLite database (this creates the database if it doesn't exist)
+conn = sqlite3.connect("sales_data.db")
+
+# Create a cursor object to execute SQL commands
+cursor = conn.cursor()
+
+# Create the 'sales' table with sample columns
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS sales (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    product TEXT,
+    quantity INTEGER,
+    price REAL
+)
+''')
+
+# Insert some sample data into the sales table
+
+cursor.executemany('''
+INSERT INTO sales (product, quantity, price)
+VALUES (?, ?, ?)
+''', [
+    ('Product A', 10, 20.0),
+    ('Product B', 5, 40.0),
+    ('Product C', 8, 15.0),
+    ('Product D', 12, 25.0)
+])
+
+# Commit changes and close the connection
+conn.commit()
+conn.close()
+
