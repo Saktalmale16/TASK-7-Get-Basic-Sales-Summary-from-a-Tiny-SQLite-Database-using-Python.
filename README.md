@@ -80,8 +80,3 @@ This project demonstrates how to use SQLite for basic sales data analysis, with 
 
 ---
 
-📎 Google Clobs Link
-
-(https://colab.research.google.com/#scrollTo=EiAHMAIe8hDT)
-
----
