@@ -71,8 +71,10 @@ VALUES (?, ?, ?)
 ])
 
 # Commit changes and close the connection
+
 conn.commit()
 conn.close()
+
 ---
 import sqlite3
 import pandas as pd
