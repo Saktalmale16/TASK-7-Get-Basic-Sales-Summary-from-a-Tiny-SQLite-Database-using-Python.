@@ -32,7 +32,7 @@ price: Price per item
 
 # Task Breakdown
 
-Create SQLite Database & Sales Table: I created an SQLite database called sales_data.db and inserted sample data into the sales table. This table contains products, their sold quantities, and their respective prices.
+1 . Create SQLite Database & Sales Table: I created an SQLite database called sales_data.db and inserted sample data into the sales table. This table contains products, their sold quantities, and their respective prices.
 
 python
 
@@ -73,4 +73,29 @@ VALUES (?, ?, ?)
 # Commit changes and close the connection
 conn.commit()
 conn.close()
+---
+import sqlite3
+import pandas as pd
+
+# Connect to SQLite database
+conn = sqlite3.connect("sales_data.db")
+
+# SQL query to get the sales summary
+query = """
+SELECT product, 
+       SUM(quantity) AS total_qty, 
+       SUM(quantity * price) AS revenue 
+FROM sales 
+GROUP BY product
+"""
+
+# Load results into pandas DataFrame
+df = pd.read_sql_query(query, conn)
+
+# Close the connection
+conn.close()
+
+# Print the results
+print(df)
+
 
