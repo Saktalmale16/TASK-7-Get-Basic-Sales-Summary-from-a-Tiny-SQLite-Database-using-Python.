@@ -34,7 +34,7 @@ price: Price per item
 
 ---
 
-# Final Deliverables 🎁 :
+# Final Deliverables 🎁 
 
 Sales Summary: A printed table showing total quantity and revenue for each product.
 
